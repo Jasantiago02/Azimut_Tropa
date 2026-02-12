@@ -1,0 +1,1 @@
+RewriteRule ^(.*) api.php?endpoint=$1 [QSA, L]

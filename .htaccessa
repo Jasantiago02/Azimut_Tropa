@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Esto redirige todas las rutas a index.html para el front
+RerwiteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+#Esto redirige las rutas que comienzan con api a api/routes/api.php
+RewriteCond ^api\(.*)$ back/api.php?endpoint=$1 [QSA,L]
