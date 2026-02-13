@@ -1,6 +1,7 @@
 RewriteEngine On
 
 RewriteRule ^api/(.*)$ back/api.php?endpoint=$1 [QSA,L,NC]
+
 # Esto redirige todas las rutas a index.html para el front
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
