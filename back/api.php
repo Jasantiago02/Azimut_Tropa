@@ -1,3 +1,4 @@
+<?php
 $endpoint = $_GET['endpoint'] ?? '';
 
 if($endpoint === 'example') {
